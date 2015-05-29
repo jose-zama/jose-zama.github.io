@@ -1,0 +1,204 @@
+---
+layout: post
+title:  "Scrum"
+categories: SoftwareEngineering
+---
+
+## Scrum
+
+Scrum one of the agile process models. Which is incremental and iterative. Iterative because progress is made through succesive refinement. Incremental because software is developed piece by piece. It is important to finish the work of one increment before moving on to the next.
+Furthermore the work of one iteration is improved on in the next and completed work is delivered throughout.
+
+## Sprint 
+
+A sprint is an interation. A basic unit of product development. A timeboxed period of development. Time does not drift. A sprint can be from one week to a month, but tipically two weeks. 
+
+A sprint has the following activities:
+
+1. Create product backlog
+2. Sprint planning meeting
+3. Sprint
+ - Daily scrum
+4. Sprint review
+5. Sprint retrospective
+
+### Daily scrum
+
+Is a short meeting to see what has been done yesterday, what is planned to do the next day and to discuss any challenge. 
+
+### Sprint review
+
+The team presents what it accomplished during the sprint.  Tipically take the form of a demo or an underlying architecture. Is informal and the whole team participates.
+
+### Retrospective
+
+One way to do a restrospective is to discuss what things the team would like to start doing, continue doing and stop doing.
+
+## Scrum Roles
+
+1. Scrum master
+2. Product owner
+3. Self-ornanising, cross-functional team
+	- Business analyst
+	- Architect
+	- Programmer
+	- Tester
+	- User experience specialist.
+	
+### Product Owner
+
+1. Defines the features of the product.
+2. Decides on release date and content
+3. Is responsible for the profitability of the product.
+4. Prioritizes features according to market value.
+5. Adjusts features and priority every iteration, as needed.
+6. Accepts or rejects work results.
+7. Acts as a communication interface between the team and stakeholders.
+
+### Scrum master
+
+1. Represents management to the project.
+2. Responsible for enacting scrum values and practices.
+3. Removes impediments.
+4. Ensures the team is functional and productive.
+5. Enables close cooperation across all roles and fuctiones.
+6. Shields the teams from external interferences.
+
+No changes should be allowed within a sprint. Therefore plan a sprint durations around how long can you commit to keeping change out the sprint.
+
+### Scrum artifacts
+
+- Product backlog
+- Sprint backlog
+- Burndown chart
+
+### Product backlog
+
+- The requirements
+- A list of all desired work on the project.
+- Ideally expessed such that each item has value to the user or the customer of the product.
+- Prioritized by the product owner.
+- Reprioritized at the start of each sprint.
+
+A simple backlog has a backlog item and a estimated effort.
+
+Every sprint has a **sprint goal** which is a short statement of what the work will be focused on during the sprint.
+
+When managing the sprint backlog 
+
+- The individuals choose their own work, in other words, work is never assigned. Estimated work remaining is updated daily.
+- Any member can add, edit or delete the sprint backlog.
+- Work for the sprint emerges.
+- If work is unclear, define a sprint backlog item with a large amount of time, and break ir down later.
+- Update work remaining as more become known.
+
+
+## Beyond scrum
+
+### Scaling SCRUM
+
+- Scrum does scale
+- Scale the product owner
+- Share the product backlog
+- Coordinate work among teams
+	- Manage dependecies
+	- Coordinate sprints
+
+A product owner is scaled by having for example a Lead product owner and product owners designated in other areas that respond to this leader.
+
+Regarding to sharing a backlog, for one product, one product backlog. Backlog items must be globally prioritized. Keep backlog to manageable size (views, themes).
+
+### Manage dependencies
+
+Dependencies between teams can stall progress. Measures to avoid this is to look-ahead sprint planning. Share team members. Use an integration team.
+
+### Coordinating within sprints
+
+Scrum of scrums meetings.
+
+With staggered sprints we can have:
+
+- Less contention on the product owner
+- Can share Scrum master
+- Dependency management is difficult
+
+With synchronized sprints 
+
+- Integrated view of the whole project
+- Teams can exchange members
+- Works well with multiple product owners
+
+Teams can be:
+
+- Collaborating co-located teams
+- Deliberately distributed teams
+
+Problems with distributed teams:
+
+- Physical separation
+- Time-zone differences
+- Cultural differences
+
+### Written documents
+
+- Can cause us to suspend judgment
+- Can stop us from iterating over meaning
+- Decrease whole team responsibility
+
+We still need to document requirements
+We still need to plan
+
+### Proxies
+
+Sometimes is not possible to access the user directly. Alternatives may include:
+
+- Customer
+- Development manager
+- Former user
+- Business analyst
+
+Must talk to (different types of) users
+
+May need more than one.
+
+## Limitations of agile
+
+### Requires buy-in from customers
+
+Active user involment is time consuming.
+
+- Continually requirements evolving.
+- Frequent delivery of software.
+
+Customers need to understand the process.
+
+- Its hard to build flexibility into a contract.
+
+### Requires buy-in from the developers
+
+- Self-organized
+- Whole team responsibility
+- Technical excellence
+- Individuals need to continually improve
+- Frequent deliverly of working software
+
+### Organizational contraints
+
+- Culture
+- Infrastructure requirements
+- Competing demands
+- High staff turnover
+
+### Project constraints
+
+- System architecture
+- Computational complexity
+- Budget
+- Fixed timescale
+- Competing demands
+
+### Agile can be dogmatic
+
+- Some agile processes can be very restrictive
+- Some agile proponents are very inflexible.
+

@@ -1,0 +1,243 @@
+---
+layout: post
+title:  "Introduction to testing and TDD"
+categories: SoftwareEngineering
+---
+
+## Software Testing
+
+A software testing can be defined as:
+
+> A process by which software functionality and quality is assesed.
+
+Broadly:
+
+- Validation
+	- Have we built the right software?
+	- Does the software fulfil with the customer's requirements?
+-Verification
+	- Have we built the software right?
+	- Is it free of defects and failures?
+	
+### Defects and failures
+
+Not all software defects are coding errors, there are also requirements gaps, and non-functional; and  not all software defects result in failure, i.e. dead code, dumb luck.
+
+### Testing coverage
+
+Is almost impossible to test all combinations of: initial state (preconditions) and input parameters.
+
+Non-functional requirements are highly subjective. e.g usability, reliability, scalability, performance, etc.
+
+Combine testing methods at different levels for maximum coverage.
+
+## Testing methods
+
+### Static Analysis
+
+- Code is not run
+- Code review, walkthrough or inspection
+- Often implicit (IDE checking syntax and structure)
+- Can be manual or automatic
+
+### Dynamic analysis
+
+- Code is run
+- Test suite
+- Manual or analysis
+
+### White boxing
+
+- Test internal functions and structures
+
+### Black-box testing
+
+- Examine functionality
+- No knowledge of internals
+- What, not how
+
+## Levels of testing
+
+This levels go from code to user
+
+1. Unit testing
+2. Integration
+3. System
+4. User acceptance
+5. Regression
+
+### Unit testing
+
+Isolate each piece of code to show correctness. This is performed independent of external code. Can be seen as a strict, written contract that a piece of code must satisfy. Test a level of:
+
+- Functions/method
+- interface/class
+
+Benefits:
+
+- **Find problems early** Code is still in development. Issues are found before hand over to other teams.
+- **Facilitates refactoring** Ensure a changed unit still functions correctly.
+- **Simplifies integration** Modules know to be correct before integration.
+- **Generates documentation**
+
+Limitations:
+- Cannot test all execution paths in a program.
+- Cannot easily test
+	- Nondeterministic functions
+	- Multiple threads
+- Not so realistic tests
+- Units tests may contain bugs
+
+### Integration testing
+
+- Combine individually test units and test together
+- Expose defects in interfaces and interactions between units
+- Most commonly an iterative process. This means test progressively larger groups.
+
+### System testing
+
+- Test a completely integrated system
+	- End to end
+- Facebook example test
+	- Log in
+	- Post message
+	- Lof out
+	
+### Acceptance testing
+
+- Functionally test the user stories
+- Verify that the system works for the user
+- Often referred to as Beta testing
+
+### Regression testing
+
+- Regression 
+	
+	- Degraded or lost functionality
+	- A bug that reapppears
+
+- Common after major code changes 
+
+	- Refactoring
+	- Adding functionality clashes
+	- Removing functionality breaks something else
+
+Testing matrix
+
+|           | Unit | Integration | System | Acceptance |
+| Static    | *    |             |       |           |
+| Dynamic   | *    | *           | *      | *        |
+| White-box | *    | *           | *      |          |
+| Blakc-box | *    | *           | *      | *        |
+
+### Development methods
+
+- Test after development
+	- Tests written after implementation
+- Test before development
+	- Tests written after design, before implementation
+- Test-driven development
+	- Write simple tests
+	- Implement only that which is required to pass the test
+	- Repeat
+
+## Test-driven development
+
+In conventional methods, testing is usually an independent stage that comes after planning, design and implementation. On the other hand, in agile approaches, all this stages are executed together within an iteration, meaning that testing is interleaved in early stages.
+
+As said before, test driven development is about writing a test, the only necessary code to pass a test, an repeat this cycle. Aditionally two rules must be followed:
+
+1. Write new code only if a test has failed.
+2. Eliminate duplication.
+
+TDD have implications as well:
+
+- Design must be organic
+	- Running code provides feedback between decisions.
+- Developers must write the unit tests.
+- Development environment must provide rapid feedback after small changes.
+- System must consist on many loosely coupled components. In order to make test easy.
+
+Programming tasks are ordered as follows:
+
+- Red: Write a test that does not work
+- Green: Make the test work quick and dirty.
+- Refactor: Review and improve code and eliminate duplication.
+
+This is the TDD mantra.
+
+Remember to retest after refactoring.
+
+### TDD Motivation
+
+- Quality Assurance becomes proactive instead of reactive.
+- Estimations can be accurate enough to involve real customers in daily development.
+- Engineers can engage in minute-by-minute collaboration.
+- Short iterations deliver real business value.
+
+Another good motivation that helps to mitigate fear, which can lead to bad communication and anger. This is because of the protections of back of tests and the clear feedback of progress.
+
+Encourages good OO practices:
+
+- Makes you thing as the user of the class when designing.
+- Interfaces first than internals.
+
+Encourages design for testing, which decrease the number of dependencies and makes easier to test all components.
+
+We build up a comprehensive set of regression tests as we progress.
+
+### TDD Limitations
+
+- Conceptually a steep learning curve
+- Not all programming tasks can be driven by tests. e.g. security, concurrency, performance, etc.
+
+So, comparing agile testing agaisnt traditional processes, the diference is that in agile is perform continuosly throughout the whole software lifecycle.
+
+### Technical practices
+
+#### Maintain quality
+
+- Quality is a whole team responsibility. 
+- Integrate testing into the process, this is done with TDD. 
+- Maintain good engineering practices
+- Collective ownership of the code
+- Pay off technical debt
+
+#### Do not leave testing until the end
+
+If leaving to the end:
+
+- Hard to improve the quality of 
+	- Existing product
+	- A "finished product"
+- Current state is difficult to gauge
+- Late, or no, feedback:
+	- Both internal and external
+
+#### Automate with continuous integration
+
+When a developer finishes coding a feature, then this code would be uploaded and integrated to the project's repository. Then a continuous integration server will report on build and tests.
+
+### Good engineering practices
+
+- Pair programming
+- Code review
+- Refactor continuously
+	- Refactor changes structure, not behaviour
+- Dont increase the entropy or disorder of the code, keep it clean.
+
+### Collective ownership
+
+Developers must feel ownership of the entire codebase. This will ensure that nobody becomes over-specialized and that no area is understood by only one person.
+
+### Technical debt
+
+This is the cost of working on a system that;
+
+- Is poorly designed
+- Is poorly written
+- Has unexpected behaviour that must be worked around
+- Has missing parts, although claims is complete.
+- Uses outdated libraries
+- Deficient in any way.
+
