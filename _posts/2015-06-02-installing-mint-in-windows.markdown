@@ -2,6 +2,7 @@
 layout: post
 title:  "Installing Linux Mint 17.1"
 categories: webtechnologies OS linux virtualmachine mint rebecca mate
+comments: true
 ---
 
 This walkthrough describes the installation of a linux distro called Mint 17.1 codename "Rebbeca" in a x64 laptop with OS windows. Therefore

@@ -2,6 +2,7 @@
 layout: post
 title:  "Running parse5 in Linux Mint"
 categories: WebTechnologies parse5 Node.js javascript html5 parser
+comments: true
 ---
 
 This walkthrough is to install and run parse5 in **Linux Mint**, 64 bits architecture.
