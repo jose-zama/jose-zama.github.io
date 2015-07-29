@@ -24,7 +24,7 @@ The index use the [ZipNum Sharded CDX format](https://github.com/ikreymer/pywb/w
 These shards are spread over multiple compressed files (part-file). 
 For each of these part-files exists a "second index" that contains the start offset and length of every block. 
 
-![ZipNum](/assets/clusterCDX.svg)
+![ZipNum](/assets/clusterCDX.png)
 
 ###Common crawl Sampling algorithm
 
