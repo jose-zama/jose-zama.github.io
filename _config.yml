@@ -4,7 +4,7 @@ email: pepeazb@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This is José personal web, which contains some interesting things 
   about projects I had, technologies and stuff I like. Most of 
-  this things are related to Web technologies, Software engineering 
+  these things are related to Web technologies, Software engineering 
   and a bit of Triathlon and videogames! Feel free to explore.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jose-zama.github.io/" # the base hostname & protocol for your site
