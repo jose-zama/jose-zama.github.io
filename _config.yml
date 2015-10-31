@@ -25,7 +25,7 @@ keywords: "zama, jose zamudio, it"
 ################
 
 black-favicon: "/img/favicon.ico"
-background-img: "../img/london.jpg"
+background-img: "/img/london.jpg"
 me-img: "/img/me.jpg"
 
 ##############################
