@@ -1,7 +1,8 @@
 ---
 layout: post
+section-type: post
 title:  "Common crawl Sampling"
-categories: WebTechnologies sampling common crawl web html
+category: Common crawl
 comments: true
 ---
 
@@ -28,19 +29,42 @@ For each of these part-files exists a "second index" that contains the start off
 
 ###Common crawl Sampling algorithm
 
-The below algorithm shows how the sample is built. First it begins by randomly assigning how many records will be retrieved per index file. 
-Then for every file, the similar procedure is done assigning how many records will be retrieved per shard. So for example if a index file
-was assigned to retrieve 10 records, these 10 records will be randomly assigned to its shards, and then the records are taken randomly from
-the shards.
+The below algorithm shows how the sample is built from a Common crawl collection. Starts by randomly distributing the numbers of records to be 
+retrieved per shard index file. Then for every file, the similar procedure is done assigning how many records will be retrieved per shard. 
+For example if a index file was assigned to retrieve 10 records, these 10 records will be randomly assigned to its shards, and then the records 
+are taken randomly from the shards.
+
+{::comment}
+The number of shard index files are ... to get a random file the method used was...
+
+The number of shards are ... to get a random shard the method used was... number of shards per file are variable
+{:/comment}
 
 {% highlight python %}
 
-recordsToGetPerIndexFile(secondIndexFile,numberOfRecords) = getFileSampleWithRepeatedElements(indexCollection)
+SET i=0
+INIT all shardIndexFile.recordsToRetrieve = 0 //shard index files number of records to retrieve to zero
+WHILE i <= sampleSize
+	SET shardIndexFile = pick a random shard Index file from the Index Collection
+	INCREMENT shardIndexFile.recordsToRetrieve by one
+	INCREMENT i by one
+ENDWHILE
 
-for each secondIndexFile,numberOfRecords in recordsToGetPerIndexFile:
-	recordsPerShard(shard,numberOfRecordsPerShard) = getShardSampleWithRepeatedElements(secondIndexFile,numberOfRecords)
-	for each shard,numberOfRecordsPerShard in recordsPerShard:
-		sample.add(getRandomRecords(shard,numberOfRecordsPerShard))
+FOR each shardIndexFile in Index Collection
+	SET i=0
+	INIT all shard.recordsToRetrieve = 0
+	WHILE i <= shardIndexFile.recordsToRetrieve 
+		SET shard = pick a random shard from the shard Index file 
+		INCREMENT shard.recordsToRetrieve by one
+		INCREMENT i by one
+	ENDWHILE
+	
+	SET records = GET random records from shard. The number of records to retrieve is the value of shard.recordsToRetrieve.
+	ADD records to sample
+	
+END FOR
+
+WRITE sample records to file
 		
 {% endhighlight %}
 

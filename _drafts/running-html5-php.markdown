@@ -1,14 +1,16 @@
 ---
 layout: post
-section-type: post
-title:  "Running parse5 in Linux Mint"
-category: HTML5
+title:  "Running html5-php in Linux Mint"
+categories: WebTechnologies html5-php php html5 parser
 comments: true
 ---
 
-This walkthrough is to install and run parse5 in **Linux Mint**, 64 bits architecture.
+As a previous post in which I installed parse5 in Linux, this walktrough will be similar. In the same way, I show how to install
+and run the html5-php parser in **Linux Mint**, in a 64 bits architecture machine.
 
-## What is parse5
+## What is html5-php
+
+UPDATE
 
 **parse5** is a HTML5 parser build in javascript for *Node.js* or *io.js*. This is a implementation of the WHATWG specification. 
 The current version is the 4.0.0 and it seems that is currently maintained according to their repository activity.
@@ -25,7 +27,34 @@ For more info follow the following links:
 **parse5** is a software for Node.js or io.js. In this walkthrough, I will use **Node.js**[^node] which includes **npm**[^npm] a package manager for javascript. This package manager will help us
 to download and install parse5 and its dependencies.
 
-### Download and install node.js
+UPDATE
+
+### Install php
+
+First we need to have installed the php translator. For this I run:
+
+{% highlight sh %}
+sudo apt-get install php5-cli
+{% endhighlight %}
+
+After the installation we can test it by creating a new "Hola mundo" php file with the next content:
+
+{% highlight php %}
+<?php
+	echo 'Hola mundo'."\n";
+?>
+{% endhighlight %}
+
+And run the next command:
+
+{% highlight sh %}
+php helloworld.php
+{% endhighlight %}
+
+The output would be : ´Hola mundo´
+
+
+### Download and install html5-php
 
 Download Node.js from their website [https://nodejs.org/download/](https://nodejs.org/download/)
 

@@ -1,15 +1,132 @@
+
 # Site settings
-title: José "Zama" Personal web 
-email: pepeazb@gmail.com
+
+url: "http://jose-zama.github.io"
+baseurl: ""
+google-tracking-id: "<YOUR GOOGLE TRACKING ID>"
+
+#############
+# HTML Head #
+#############
+
+author: "Jose Zamudio"
+lang: "en"
+title: José "Zama" | Blog
+favicon: "/img/favicon.ico"
 description: > # this means to ignore newlines until "baseurl:"
   This is José personal web, which contains some interesting things 
   about projects I had, technologies and stuff I like. Most of 
   these things are related to Web technologies, Software engineering 
   and a bit of Triathlon and videogames! Feel free to explore.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jose-zama.github.io/" # the base hostname & protocol for your site
-twitter_username: pepezama
-github_username:  jose-zama
+keywords: "zama, jose zamudio, it"
+
+################
+# Intro layout #
+################
+
+black-favicon: "/img/favicon.ico"
+background-img: "../img/london.jpg"
+me-img: "/img/me.jpg"
+
+##############################
+# Dynamic Text on the header #
+##############################
+
+dynamic-typing: True
+shuffle: True	# Shuffle the lines.
+loop: True
+loop-count:	False # Set False for infinite loop, or set any number for finite loop.
+type-speed:	10		# Default 10
+start-delay: 200	# Default 200
+delete-delay: 5000	# Default 5000
+lines:			# You can add HTML Tags in the Text
+  - text: "How is it going?"
+  - text: "¡Bienvenido!"
+
+########
+# Blog #
+########
+
+post-preview-words: 128
+
+paginate: 10
+
+fb-share: True
+twitter-share: True
+reddit-share: False
+disqus-shortname: "zamapage"
+
+###############
+# Life Events #
+###############
+
+events:
+  - image: "/img/career/alan.png"
+    date: "September 2014 - September 2015"
+    description: "MSc in Advanced Computer Science. University of Manchester. United Kingdom."
+  - image: "/img/career/pig.png"
+    date: "March 2010 - August 2014 "
+    description: "System Analyst in HSBC México."
+  - image: "/img/career/graduationBSc.jpg"
+    date: "August 2004 - May 2009"
+    description: "BSc in Electronic Systems. ITESM. Toluca, México."
+
+# First image of the Career timeline
+career-img: "/img/career/bb.png"
+career-title: "Can you see me now? by Frits Ahlefeldt-Laurvig is licensed under CC BY-NC-ND 2.0"
+career-link: "https://www.flickr.com/photos/hikingartist/15940615297/in/photolist-qhBPyM-axoyEu-jiw9dH-pVgxHk-hsNkRn-bjDLLX-i3346G-3pu8FN-fBZYzr-d5Fimo-795vAo-92G4KQ-9r3RFG-hFCJ7h-b6hPav-8NqNDL-9qZTyT-6FzvjR-uMNQX-cNgtME-3ppzir-3pu7Kw-3ppA1k-3pua3o-3ppzBF-3pu9Df-3pu9gU-3pu96G-3ppxKx-3pu7yY-3ppxfR-3ppwEH-5Rconz-c8Fj6s-48vHGj-5EgsN1-3puCT3-3pu8uQ-3pu8h3-3ppxWc-3ppx4B-3ppwtH-3ppwhP-3ppw6F-3ppvHD-3pu5gj-d5FHwh-d5FGZ5-d5FhRq-3ppvUF"
+
+##################
+# Contact layout #
+##################
+
+email: "pepeazb@hotmail.com"
+
+##################
+# Social Buttons #
+##################	
+
+social:
+  - title: "facebook"
+    url: "https://www.facebook.com/ArmandoZamudio"
+  - title: "twitter"
+    url: "https://twitter.com/pepezama"
+#  - title: "youtube"
+#    url: "http://youtube.com/"
+  - title: "github"
+    url: "https://github.com/jose-zama"
+  - title: "rss"
+    url: "/feed.xml"
+
+############
+# 404 page #
+############
+
+404-img: "/img/labtocat.png"
+
+################################################################################
+
+# Tread carefully if you want to change the variables below this point!
+
+# Navigation bar links
+# Blog link in the blog and post pages will point to the blog.html#blog
+# In the default page it will point to the preview of the last post
+
+pages_list:
+  About: 'about'
+  Blog: 'blog'
+  Career: 'career'
+  Contact: 'contact'
+
+# Pagination path
+paginate_path: "blog/page:num"
+
+# Enable minification SASS
+sass:
+  style: compressed
+
+# Exclusion list from the generated _site
+exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor"]
 
 # Build settings
 markdown: kramdown
