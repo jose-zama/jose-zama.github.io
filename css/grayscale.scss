@@ -42,7 +42,7 @@ p {
     line-height: 1.5;
 }
 
-li {
+section li {
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -54,7 +54,7 @@ li {
         line-height: 1.6;
     }
 	
-	li {
+	section li {
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -90,6 +90,10 @@ a {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: $dark;
+
+    /* Fix height limit and scroll for small screen and many items menu */
+    max-height: 100%;
+    overflow-y: auto;
     .navbar-brand {
         font-weight: 700;
             &:focus {
@@ -107,6 +111,9 @@ a {
     }
     a {
         color: $light;
+    }
+    ul {
+      font-size: 14px;
     }
     .nav {
         li {
@@ -461,10 +468,14 @@ pre {
 section img {
 	background-color: #fff;
     border-radius: 6px;
-    padding: 6px;
+    /** padding: 6px; Careful, if uncommented check that the images in carrer and in posts look good**/
 }
 
 img {
     max-width: 100%;
     vertical-align: middle;
+}
+
+ol {
+	margin: 0px 0px 35px;
 }
