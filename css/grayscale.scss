@@ -42,7 +42,7 @@ p {
     line-height: 1.5;
 }
 
-section li {
+section li, section table {
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -54,7 +54,7 @@ section li {
         line-height: 1.6;
     }
 	
-	section li {
+	section li, section table {
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -476,6 +476,24 @@ img {
     vertical-align: middle;
 }
 
-ol, pre {
+ol, pre, table {
 	margin: 0px 0px 35px;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid $primary;
+}
+
+th{
+    border:2px solid $primary;
+	padding-right: $cell-padding;
+	padding-left: $cell-padding;
+}
+
+td{
+    border:1px solid #CD9F01;
+	padding-right: $cell-padding;
+	padding-left: $cell-padding;
 }
