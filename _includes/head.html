@@ -42,6 +42,15 @@
   {% if site.favicon %}
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{ site.favicon }}">
   {% endif %}
+  
+  <meta property="og:url"           content="{{site.url}}{{site.baseurl}}{{page.url}}" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="{{ post.content | truncatewords: site.post-preview-words | strip_html }}" />
+  
+
+  
+  
 </head>
 
 <!-- HEAD End -->
