@@ -13,7 +13,9 @@
   {% if page.url == {{fourofour}} | prepend: {{site.baseurl}} %}
     <meta http-equiv="refresh" content="20; url={{site.baseurl}}/">
   {% endif %}
-  <title>{{ site.title }} {% if page.title %} | {{ page.title }}{% endif %}</title>
+  
+  {% capture title %}{{ site.title }} {% if page.title %} | {{ page.title }}{% endif %}{% endcapture %}
+  <title>{{title}}</title>
 
   
   <!-- Bootstrap Core CSS -->
@@ -42,15 +44,13 @@
   {% if site.favicon %}
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{ site.favicon }}">
   {% endif %}
-  
+
+  <!-- Facebook metadata-->  
   <meta property="og:url"           content="{{site.url}}{{site.baseurl}}{{page.url}}" />
   <meta property="og:type"          content="{% if page.layout == 'post' %}article{% endif %}" />
-  <meta property="og:title"         content="{{ site.title }} {% if page.title %} | {{ page.title }}{% endif %}" />
-  <meta property="og:description"   content="{% if page.description %} {{ page.description }}{% else %}{{ page.content | truncatewords: site.post-preview-words  | markdownify | strip_html}}{% endif %}" />
+  <meta property="og:title"         content="{{title | replace:'"','&quot;'}}" /> 
+  <meta property="og:description"   content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | truncatewords: site.post-preview-words  | markdownify | strip_html}}{% endif %}" />
   <meta property="og:image"         content="" />
-  
-
-  
   
 </head>
 
