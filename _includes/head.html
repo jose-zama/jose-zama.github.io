@@ -48,9 +48,9 @@
   <!-- Facebook metadata-->  
   <meta property="og:url"           content="{{site.url}}{{site.baseurl}}{{page.url}}" />
   <meta property="og:type"          content="{% if page.layout == 'post' %}article{% endif %}" />
-  <meta property="og:title"         content="{{title | replace:'"','&quot;'}}" /> 
+  <meta property="og:title"         content="{{title}}" /> 
   <meta property="og:description"   content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | truncatewords: site.post-preview-words  | markdownify | strip_html}}{% endif %}" />
-  <meta property="og:image"         content="" />
+  <meta property="og:image"         content="{{site.baseurl}}{{ site.me-img }}" />
   
 </head>
 
