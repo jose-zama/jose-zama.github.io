@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <meta property="og:url"           content="{{site.url}}{{site.baseurl}}{{page.url}}" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="{{ post.content | truncatewords: site.post-preview-words | strip_html }}" />
+  
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
   <meta name="keywords" content="{{ site.keywords }}">
@@ -43,10 +49,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{ site.favicon }}">
   {% endif %}
   
-  <meta property="og:url"           content="{{site.url}}{{site.baseurl}}{{page.url}}" />
-	<meta property="og:type"          content="website" />
-	<meta property="og:title"         content="Your Website Title" />
-	<meta property="og:description"   content="{{ post.content | truncatewords: site.post-preview-words | strip_html }}" />
+ 
   
 
   
