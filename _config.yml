@@ -11,7 +11,7 @@ google-tracking-id: "<YOUR GOOGLE TRACKING ID>"
 
 author: "Jose Zamudio"
 lang: "en"
-title: José "Zama" | Blog
+title: José &quot;Zama&quot; | Blog
 favicon: "/img/favicon.ico"
 description: > # this means to ignore newlines until "baseurl:"
   This is José personal web, which contains some interesting things 
