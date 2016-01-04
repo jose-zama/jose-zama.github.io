@@ -4,6 +4,8 @@ section-type: post
 title:  "Sort algorithm"
 category: Interview Algorithms
 comments: true
+
+description: This post is one of a series showing my solutions and implementations to the interview questions that Smerity gathered in his post. In this post I show how I dealt with the sort Algorithm.
 ---
 
 This post is one of a series showing my solutions and implementations to the interview questions that Smerity 
