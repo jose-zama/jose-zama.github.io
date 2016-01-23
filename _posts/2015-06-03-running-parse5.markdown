@@ -4,6 +4,7 @@ section-type: post
 title:  "Running parse5 in Linux Mint"
 category: HTML5
 comments: true
+tags: [ 'tutorial' ]
 ---
 
 This walkthrough is to install and run parse5 in **Linux Mint**, 64 bits architecture.
