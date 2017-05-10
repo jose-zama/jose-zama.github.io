@@ -61,12 +61,16 @@ disqus-shortname: "zamapage"
 ###############
 
 events:
+  - image: "/img/career/flasks.jpg"
+    date: "May 2014 - Current"
+    description: "Software engineer at Thermo Fisher Scientific"
+    imageCredit : Public Health Image Library (PHIL)
   - image: "/img/career/alan.png"
     date: "September 2014 - September 2015"
     description: "MSc in Advanced Computer Science. University of Manchester. United Kingdom."
   - image: "/img/career/pig.png"
     date: "March 2010 - August 2014 "
-    description: "System Analyst in HSBC México."
+    description: "System Analyst at HSBC México."
   - image: "/img/career/graduationBSc.jpg"
     date: "August 2004 - May 2009"
     description: "BSc in Electronic Systems. ITESM. Toluca, México."
